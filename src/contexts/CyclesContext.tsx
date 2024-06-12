@@ -22,7 +22,7 @@ interface CyclesContextType {
   cycles: Cycle[]
   activeCycle: Cycle | undefined // Se não tenho nenhum ciclo ativo ele é indefinido
   activeCycleId: string | null
-  amountSecondsPassed: number
+  amountSecondsPassed: number | undefined
   markCurrentCycleAsFinished: () => void
   setSecondsPassed: (seconds: number) => void
   createNewCycle: (data: CreateCycleData) => void
