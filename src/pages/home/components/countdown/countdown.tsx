@@ -14,7 +14,9 @@ export function Countdown() {
 
   const totalSeconds = activeCycle ? activeCycle.minutesAmount * 60 : 0
 
-  const currentSeconds = activeCycle ? totalSeconds - amountSecondsPassed : 0
+  const currentSeconds = activeCycle
+    ? totalSeconds - (amountSecondsPassed ?? 0)
+    : 0
 
   // fazer o arredondamento para baixo -> 1499 = 24 minutos
   const minutesAmount = Math.floor(currentSeconds / 60)
